@@ -13,10 +13,11 @@
       color: #333;
     }
     .container {
+      width: 90%;
       max-width: 600px;
-      margin: 40px auto;
+      margin: 20px auto;
       background: #ffffffcc;
-      padding: 30px;
+      padding: 20px;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       backdrop-filter: blur(10px);
@@ -33,10 +34,11 @@
       font-size: 1.1em;
     }
     label {
+      font-size: 1em;
       display: block;
       background: #f3efff;
       margin: 10px 0;
-      padding: 10px;
+      padding: 14px;
       border-radius: 10px;
       cursor: pointer;
       transition: background 0.3s;
@@ -48,9 +50,9 @@
       background: #6a5acd;
       color: white;
       border: none;
-      padding: 12px 20px;
+      padding: 14px 20px;
       border-radius: 10px;
-      font-size: 16px;
+      font-size: 1em;
       cursor: pointer;
       display: block;
       margin: 30px auto 0;
@@ -159,6 +161,15 @@
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.4em;
+  }
+  .question p {
+    font-size: 1em;
+  }
+}
+
 
 
   </style>
