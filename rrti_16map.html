@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>귀여운 RRTI 16유형 맵</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #e0e7ff, #dbeafe); /* 연보라~하늘 배경 */
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 90vw;
+      max-width: 1200px;
+    }
+    .card {
+      background: white;
+      border: 2px solid #c4b5fd;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .emoji {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    .type {
+      font-weight: 600;
+      color: #4f46e5;
+      font-size: 1.1em;
+    }
+    .code {
+      color: #a78bfa;
+      font-size: 0.85em;
+      margin-left: 5px;
+    }
+    .desc {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card"><div class="emoji">🕯</div><div class="type">명상하는 휴씨 <span class="code">AMFR</span></div><div class="desc">조용한 공간에서 정서적 회복, 명상·일기 좋아함</div></div>
+    <div class="card"><div class="emoji">🍵</div><div class="type">감성적인 휴씨 <span class="code">AMFP</span></div><div class="desc">책, 차 한잔, 감성적 콘텐츠에 빠져 충전</div></div>
+    <div class="card"><div class="emoji">📋</div><div class="type">고요한 휴씨 <span class="code">AMSR</span></div><div class="desc">명확한 쉼 스케줄 선호, 요가·명상·걷기 등</div></div>
+    <div class="card"><div class="emoji">🎨</div><div class="type">감각적인 휴씨 <span class="code">AMSP</span></div><div class="desc">향기, 색감, 맛 등 감각에 즉흥 몰입하며 회복</div></div>
+    <div class="card"><div class="emoji">📖</div><div class="type">꿈꾸는 휴씨 <span class="code">AIFR</span></div><div class="desc">생각·글쓰기·공상으로 에너지를 충전</div></div>
+    <div class="card"><div class="emoji">🎧</div><div class="type">몽상하는 휴씨 <span class="code">AIFP</span></div><div class="desc">몽상과 음악, 혼자만의 영화 시간 등으로 회복</div></div>
+    <div class="card"><div class="emoji">🧠</div><div class="type">전략적인 휴씨 <span class="code">AISR</span></div><div class="desc">뇌 정리와 문제 해결이 쉼, 일-삶 밸런스 고수</div></div>
+    <div class="card"><div class="emoji">🎲</div><div class="type">창의적인 휴씨 <span class="code">AISP</span></div><div class="desc">쉼 속에서 창의적 아이디어 터뜨리는 유형</div></div>
+    <div class="card"><div class="emoji">☕</div><div class="type">아기자기 휴씨 <span class="code">CMFR</span></div><div class="desc">공감 대화 + 아늑한 분위기 속에서 함께 쉬기</div></div>
+    <div class="card"><div class="emoji">🎤</div><div class="type">수다쟁이 휴씨 <span class="code">CMFP</span></div><div class="desc">감성 충만한 대화로 에너지 충전, 분위기메이커</div></div>
+    <div class="card"><div class="emoji">🏞</div><div class="type">미소천사 휴씨 <span class="code">CMSR</span></div><div class="desc">함께 걷기, 루틴 산책, 공감 루틴으로 회복</div></div>
+    <div class="card"><div class="emoji">🧁</div><div class="type">트렌디한 휴씨 <span class="code">CMSP</span></div><div class="desc">함께 디저트·소풍 등 감각 활동으로 쉬는 스타일</div></div>
+    <div class="card"><div class="emoji">💬</div><div class="type">다정다감 휴씨 <span class="code">CIFR</span></div><div class="desc">감정에 공감하고 사고 공유하며 치유 받는 타입</div></div>
+    <div class="card"><div class="emoji">🤹</div><div class="type">창의적인 휴씨 <span class="code">CIFP</span></div><div class="desc">즉흥적 창의 쉼, 놀이+상상 혼합형 충전</div></div>
+    <div class="card"><div class="emoji">🎯</div><div class="type">갓생러 휴씨 <span class="code">CISR</span></div><div class="desc">계획 짜며 함께 쉼을 실현, 생산적 회복 추구</div></div>
+    <div class="card"><div class="emoji">🧩</div><div class="type">비타민 휴씨 <span class="code">CISP</span></div><div class="desc">활동과 생각이 넘치는 즉흥적 쉼의 달인</div></div>
+  </div>
+</body>
+</html>
