@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RRTI 휴식 유형 테스트</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffffcc;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #6a5acd;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    label {
+      display: block;
+      background: #f3efff;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    label:hover {
+      background: #ded5ff;
+    }
+    button {
+      background: #6a5acd;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
+    }
+    .result {
+      text-align: center;
+      padding: 20px;
+      background: #f0f8ff;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+    .emoji {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛋️ RRTI 휴식 유형 테스트</h1>
+    <form id="testForm">
+      <div class="question-page" style="display:block;">
+        <div class="question">
+          <p>1. 드디어 쉬는 날! 그때 나는?</p>
+          <label><input type="radio" name="A1" value="A" required /> 집에서 뒹굴뒹굴 ~ 혼자 있는 시간이 제일 좋아 🏡</label>
+          <label><input type="radio" name="A1" value="C" /> 무조건 외출!! 약속이 있어야 쉬는 기분이야 👯</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+          <p>2. 힐링 여행을 고른다면?</p>
+          <label><input type="radio" name="A2" value="A" required /> 혼자 떠나는 고요한 바닷가🏖️</label>
+          <label><input type="radio" name="A2" value="C" /> 친구와 함께 떠나는 도시 투어 🏙️</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>3. 나에게 진짜 ‘쉼’이란?</p>
+        <label><input type="radio" name="A3" value="A" required /> 나만의 생각과 감정을 정리하는 나의 시간 ✍🏻</label>
+        <label><input type="radio" name="A3" value="C" />  소중한 사람과 함께 나누는 편안한 대화 💬</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>4. 산책을 할 때 나는</p>
+        <label><input type="radio" name="M1" value="M" required /> 풍경, 바람, 발걸음에 집중함 💨</label>
+        <label><input type="radio" name="M1" value="I" /> 이런저런 생각에 빠져 걷기 👣</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>5. 책을 고를 때 더 끌리는 건</p>
+        <label><input type="radio" name="M2" value="M" required /> 감각적이고 현실적인 에세이 📝</label>
+        <label><input type="radio" name="M2" value="I" /> 상상력 넘치는 소설과 판타지 🧙🏻</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>6. 좋아하는 힐링 방법은</p>
+        <label><input type="radio" name="M3" value="M" required /> 🧘 요가, 스트레칭, 아로마 등 오감 자극</label>
+        <label><input type="radio" name="M3" value="I" /> 💭 음악 들으며 행복한 상상하기</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>7. 오늘따라 모든 일이 마음대로 안 될 때 나는</p>
+        <label><input type="radio" name="F1" value="F" required /> 일단 이 감정을 털어버리자 😮‍💨</label>
+        <label><input type="radio" name="F1" value="S" /> 뭐가 문제였을까 🤔 해결하려면 원인 분석은 필수 👀</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>8. 하루를 마무리하며 일기를 쓸 때 나는</p>
+        <label><input type="radio" name="F2" value="F" required /> 오늘 기분이 어땠더라🤔 오늘 느낀 감정에 집중!</label>
+        <label><input type="radio" name="F2" value="S" /> 오늘 뭘 했더라⏰ 일과를 정리!</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>9. 잘 쉬는 사람은 어떤 사람일까?</p>
+        <label><input type="radio" name="F3" value="F" required /> 자기 감정을 잘 아는 사람</label>
+        <label><input type="radio" name="F3" value="S" /> 자기 루틴을 잘 실천하는 사람</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>10. 나에게 이상적인 휴일은</p>
+        <label><input type="radio" name="R1" value="P" required /> 감정 따라 자유롭게 움직여야지!</label>
+        <label><input type="radio" name="R1" value="R" /> 루틴은 필수 👀 휴식도 계획적으로! </label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>11. 갑자기 여유 시간이 생겼다! 그럴 때 나는</p>
+        <label><input type="radio" name="R2" value="P" required /> 발걸음이 이끄는대로 👣</label>
+        <label><input type="radio" name="R2" value="R" /> ✅ 원래 하던 루틴대로 </label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+        <p>12. ‘오늘은 쉬어야겠다’는 생각이 들었어! 왜일까?</p>
+        <label><input type="radio" name="R3" value="P" required /> 내가 지금 많이 힘들구나…</label>
+        <label><input type="radio" name="R3" value="R" /> 일정에 따라 오늘은 쉬는 날이니까!</label>
+        </div>
+      </div>
+      <div class="question-page" style="display:none;">
+        <div class="question">
+          <p>12. ‘오늘은 쉬어야겠다’는 생각이 들었어! 왜일까?</p>
+          <label><input type="radio" name="R3" value="P" required /> 내가 지금 많이 힘들구나…</label>
+          <label><input type="radio" name="R3" value="R" /> 일정에 따라 오늘은 쉬는 날이니까!</label>
+        </div>
+      </div>
+      <button type="button" id="nextBtn">다음</button>
+    </form>
+    <div id="result" class="result" style="display:none;"></div>
+  </div>
+
+  <script>
+    const results = {
+      AMFR: { emoji: "🕯", name: "명상하는 휴씨", desc: "조용한 공간에서 정서적 회복, 명상·일기 좋아함" },
+      AMFP: { emoji: "🍵", name: "감성적인 휴씨", desc: "책, 차 한잔, 감성적 콘텐츠에 빠져 충전" },
+      AMSR: { emoji: "📋", name: "고요한 휴씨", desc: "명확한 쉼 스케줄 선호, 요가·명상·걷기 등" },
+      AMSP: { emoji: "🎨", name: "감각적인 휴씨", desc: "향기, 색감, 맛 등 감각에 즉흥 몰입하며 회복" },
+      AIFR: { emoji: "📖", name: "꿈꾸는 휴씨", desc: "생각·글쓰기·공상으로 에너지를 충전" },
+      AIFP: { emoji: "🎧", name: "몽상하는 휴씨", desc: "몽상과 음악, 혼자만의 영화 시간 등으로 회복" },
+      AISR: { emoji: "🧠", name: "전략적인 휴씨", desc: "뇌 정리와 문제 해결이 쉼, 일-삶 밸런스 고수" },
+      AISP: { emoji: "🎲", name: "창의적인 휴씨", desc: "쉼 속에서 창의적 아이디어 터뜨리는 유형" },
+      CMFR: { emoji: "☕", name: "아기자기 휴씨", desc: "공감 대화 + 아늑한 분위기 속에서 함께 쉬기" },
+      CMFP: { emoji: "🎤", name: "수다쟁이 휴씨", desc: "감성 충만한 대화로 에너지 충전, 분위기메이커" },
+      CMSR: { emoji: "🏞", name: "미소천사 휴씨", desc: "함께 걷기, 루틴 산책, 공감 루틴으로 회복" },
+      CMSP: { emoji: "🧁", name: "트렌디한 휴씨", desc: "함께 디저트·소풍 등 감각 활동으로 쉬는 스타일" },
+      CIFR: { emoji: "💬", name: "다정다감 휴씨", desc: "감정에 공감하고 사고 공유하며 치유 받는 타입" },
+      CIFP: { emoji: "🤹", name: "창의적인 휴씨", desc: "즉흥적 창의 쉼, 놀이+상상 혼합형 충전" },
+      CISR: { emoji: "🎯", name: "갓생러 휴씨", desc: "계획 짜며 함께 쉼을 실현, 생산적 회복 추구" },
+      CISP: { emoji: "🧩", name: "비타민 휴씨", desc: "활동과 생각이 넘치는 즉흥적 쉼의 달인" },
+    };
+
+    const form = document.getElementById("testForm");
+    const pages = document.querySelectorAll(".question-page");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultDiv = document.getElementById("result");
+    let currentPage = 0;
+
+    nextBtn.addEventListener("click", () => {
+      const currentInputs = pages[currentPage].querySelectorAll("input");
+      const checked = Array.from(currentInputs).some(input => input.checked);
+
+      if (!checked) {
+        alert("선택지를 하나 골라주세요!");
+        return;
+      }
+
+      pages[currentPage].style.display = "none";
+      currentPage++;
+
+      if (currentPage < pages.length) {
+        pages[currentPage].style.display = "block";
+      } else {
+        showResult();
+      }
+    });
+
+    function showResult() {
+      const formData = new FormData(form);
+      const letters = { A: 0, C: 0, M: 0, I: 0, F: 0, S: 0, R: 0, P: 0 };
+
+      for (let [key, val] of formData.entries()) {
+        letters[val]++;
+      }
+
+      const AorC = letters["A"] >= 2 ? "A" : "C";
+      const MorI = letters["M"] >= 2 ? "M" : "I";
+      const ForS = letters["F"] >= 2 ? "F" : "S";
+      const RorP = letters["R"] >= 2 ? "R" : "P";
+
+      const type = `${AorC}${MorI}${ForS}${RorP}`;
+      const result = results[type];
+
+      form.style.display = "none";
+      resultDiv.style.display = "block";
+      resultDiv.innerHTML = `
+        <h2>당신의 휴식 유형은? </p> ${result.emoji} <strong>${type} ${result.name}</strong></h2>
+        <p>${result.desc}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
