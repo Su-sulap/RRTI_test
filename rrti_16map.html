@@ -2,64 +2,83 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>귀여운 RRTI 16유형 맵</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
-      background: linear-gradient(135deg, #e0e7ff, #dbeafe); /* 연보라~하늘 배경 */
+      background: linear-gradient(135deg, #e0e7ff, #dbeafe);
       margin: 0;
-      padding: 40px;
+      padding: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 20px;
-      width: 90vw;
+      width: 100%;
       max-width: 1200px;
     }
+
     .card {
       background: white;
       border: 2px solid #c4b5fd;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 20px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.2s;
-      position: relative;
     }
+
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-4px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
+
     .emoji {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
+      font-size: 1.8rem;
+      margin-bottom: 6px;
     }
+
     .type {
       font-weight: 600;
       color: #4f46e5;
-      font-size: 1.1em;
+      font-size: 1em;
     }
+
     .code {
       color: #a78bfa;
       font-size: 0.85em;
       margin-left: 5px;
     }
+
     .desc {
-      margin-top: 10px;
-      font-size: 0.95em;
+      margin-top: 8px;
+      font-size: 0.92em;
       color: #4b5563;
       line-height: 1.4;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 14px;
+      }
+      .emoji {
+        font-size: 1.6rem;
+      }
+      .desc {
+        font-size: 0.88em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="grid">
+    <!-- 카드 16개 (변경 없음, 위 코드에서 유지) -->
     <div class="card"><div class="emoji">🕯</div><div class="type">명상하는 휴씨 <span class="code">AMFR</span></div><div class="desc">조용한 공간에서 정서적 회복, 명상·일기 좋아함</div></div>
     <div class="card"><div class="emoji">🍵</div><div class="type">감성적인 휴씨 <span class="code">AMFP</span></div><div class="desc">책, 차 한잔, 감성적 콘텐츠에 빠져 충전</div></div>
     <div class="card"><div class="emoji">📋</div><div class="type">고요한 휴씨 <span class="code">AMSR</span></div><div class="desc">명확한 쉼 스케줄 선호, 요가·명상·걷기 등</div></div>
